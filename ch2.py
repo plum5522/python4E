@@ -4,6 +4,7 @@
 # float() to convert the string to a number. Do not worry about error checking
 #  or bad user data.
 
-hours = input("Enter hours: ")
-gross_pay = float(hours) * 2.75
+hrs = input("Enter hours: ")
+rate = input("Enter rate: ")
+gross_pay = float(hrs) * float(rate)
 print("Pay:", gross_pay)
