@@ -18,7 +18,6 @@
 
 # *****************************************************************
 
-
 #3.3 Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error. 
 # If the score is between 0.0 and 1.0, print a grade using the following table:
 #Score Grade
@@ -44,6 +43,8 @@
 #else:
 #    print("F")
 
+# *****************************************************************
+
 #4.6 Write a program to prompt the user for hours and rate per hour using input to compute gross pay. 
 # Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for 
 # all hours worked above 40 hours. Put the logic to do the computation of pay in a function 
@@ -53,16 +54,18 @@
 # Do not worry about error checking the user input unless you want to - you can assume the user
 #  types numbers properly. Do not name your variable sum or use the sum() function.
 
-def computepay(h, r):
-    if h < 40:
-        return h * r
-    else:
-        return 40 * r + (h-40) * r * 1.5
+# def computepay(h, r):
+#     if h < 40:
+#         return h * r
+#     else:
+#         return 40 * r + (h-40) * r * 1.5
 
-hrs = input("Enter Hours:")
-h = float(hrs)
-rate = input("Enter rate:")
-r = float(rate)
+# hrs = input("Enter Hours:")
+# h = float(hrs)
+# rate = input("Enter rate:")
+# r = float(rate)
 
-p = computepay(h, r)
-print("Pay", p)
+# p = computepay(h, r)
+# print("Pay", p)
+
+# *****************************************************************
