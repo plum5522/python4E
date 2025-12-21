@@ -100,25 +100,56 @@
 # they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum 
 # loop to find the most prolific committer.
 
-fn = input("Enter file:")
-if len(fn) < 1:
-    fn = "mbox-short.txt"
-fh = open(fn)
-count_name = dict()
+# fn = input("Enter file:")
+# if len(fn) < 1:
+#     fn = "mbox-short.txt"
+# fh = open(fn)
+# count_name = dict()
 
-for line in fh:
-    if "From " not in line:
-        continue
-    name = line.split()[1]
-    count_name[name] = count_name.get(name, 0) + 1
+# for line in fh:
+#     if "From " not in line:
+#         continue
+#     name = line.split()[1]
+#     count_name[name] = count_name.get(name, 0) + 1
 
-max_count = None
-max_name = None
+# max_count = None
+# max_name = None
 
-for name in count_name:
-    if max_count is None or count_name[name] > max_count:
-        max_count = count_name[name]
-        max_name = name
+# for name in count_name:
+#     if max_count is None or count_name[name] > max_count:
+#         max_count = count_name[name]
+#         max_name = name
     
-print(max_name, max_count)
+# print(max_name, max_count)
 
+# *****************************************************************
+
+# 10.2 Write a program to read through the mbox-short.txt and figure out the distribution by hour of 
+# the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time 
+# and then splitting the string a second time using a colon.
+# From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+# Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
+
+# fn = input("Enter file:")
+# if len(fn) < 1:
+#     fn = "mbox-short.txt"
+# fh = open(fn)
+
+# hour_count = dict()
+
+# for line in fh:
+#     if "From " not in line:
+#         continue
+#     pos = line.find(':')
+#     hour = line[pos-2:pos]
+#     hour_count[hour] = hour_count.get(hour, 0) + 1
+
+# sort_list = list()
+
+# for k,v in hour_count.items():
+#     sort_list.append((k,v))
+
+# sort_list.sort()
+
+# for v,k in sort_list:
+#     print(v, k)
